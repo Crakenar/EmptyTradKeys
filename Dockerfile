@@ -1,6 +1,6 @@
 # Use an official Rust runtime as a parent image
 FROM rust:1.75
-RUN cargo install cargo-watch
+
 # Set the working directory to /app
 WORKDIR /app
 
@@ -10,6 +10,9 @@ COPY . .
 # Build the application
 RUN cargo build --release
 
+# Expose the port that the application runs on
+EXPOSE 8080
+
+
 # Run the application
-#RUN chmod +x ./target/release/empty_array_keys
 CMD ["./target/release/empty_array_keys"]

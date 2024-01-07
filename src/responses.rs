@@ -1,6 +1,6 @@
 use rocket::{serde::json::Json, Responder};
 use serde::Serialize;
-
+use std::collections::HashMap; 
 #[derive(Debug, Serialize)]
 pub struct SuccessResponse<T> {
     pub data: T,
@@ -29,4 +29,9 @@ pub enum Error {
 #[derive(Debug, Serialize)]
 pub struct EmptyTradKeys {
     pub empty_trad_keys: Vec<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct EmptyTradKeysHashMap {
+    pub empty_or_missing_trad_keys: HashMap<String, (String, String)>
 }

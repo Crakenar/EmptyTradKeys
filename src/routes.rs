@@ -1,30 +1,35 @@
-use serde_json::Value;
-use std::fs;
-use rocket::{form::Form, serde::json::Json};
 use rocket::fs::TempFile;
+use rocket::{form::Form, serde::json::Json};
+use serde_json::Value;
+use std::collections::HashMap;
 
 #[path = "responses.rs"]
 mod responses;
 
-#[derive(FromForm)]
+#[path = "./utils/utils.rs"]
+mod utils;
+#[derive(FromForm, Debug)]
 pub struct Upload<'f> {
     file: TempFile<'f>,
 }
+#[derive(FromForm, Debug)]
+pub struct UploadFiles<'f> {
+    file: TempFile<'f>,
+    file2: TempFile<'f>,
+}
 
- #[get("/")]
- pub fn index() -> &'static str {
-     "Hello World!"
- }
+#[get("/")]
+pub fn index() -> &'static str {
+    "Hello World!"
+}
 
 #[post("/upload", format = "multipart/form-data", data = "<form>")]
-pub async fn upload_file(form: Form<Upload<'_>>) -> Result<Json<responses::SuccessResponse<responses::EmptyTradKeys>>, responses::Error> {
-    let option_path = Some(form.file.path()).unwrap();
-    let path = option_path.unwrap();
+pub async fn upload_file(
+    form: Form<Upload<'_>>,
+) -> Result<Json<responses::SuccessResponse<responses::EmptyTradKeys>>, responses::Error> {
 
-    let x = fs::read_to_string(path).unwrap();
-    let json: Value = serde_json::from_str(&x).unwrap();
+    let json = utils::file_content(form.file.path());
     let parsed_array: Vec<Value> = serde_json::from_str(&json.to_string()).unwrap();
-
 
     let mut empty_trad_key_array: Vec<String> = Vec::new();
     for object in &parsed_array {
@@ -66,7 +71,39 @@ pub async fn upload_file(form: Form<Upload<'_>>) -> Result<Json<responses::Succe
         }
     }
     Ok(Json(responses::SuccessResponse {
-        data: responses::EmptyTradKeys { empty_trad_keys: empty_trad_key_array },
+        data: responses::EmptyTradKeys {
+            empty_trad_keys: empty_trad_key_array,
+        },
         code: 200,
     }))
 }
+
+#[post(
+    "/convert_php_files_to_json",
+    format = "multipart/form-data",
+    data = "<form>"
+)]
+pub async fn convert_php_files_to_json(
+    form: Form<UploadFiles<'_>>,
+) -> Result<Json<responses::SuccessResponse<responses::EmptyTradKeysHashMap>>, responses::Error> {
+
+    let json_map: HashMap<String, Value> = utils::get_php_file_key_values(form.file.path());
+    let json_map2: HashMap<String, Value> = utils::get_php_file_key_values(form.file2.path());
+
+    let mut diff: HashMap<String, (String, String)> = HashMap::new();
+    if json_map.ne(&json_map2) {
+        diff = utils::differences_hashmaps(&json_map, &json_map2);
+    }
+
+    Ok(Json(responses::SuccessResponse {
+        data: responses::EmptyTradKeysHashMap {
+            empty_or_missing_trad_keys: diff,
+        },
+        code: 200,
+    }))
+}
+
+
+
+
+
