@@ -11,6 +11,11 @@ pub struct Upload<'f> {
     file: TempFile<'f>,
 }
 
+ #[get("/")]
+ pub fn index() -> &'static str {
+     "Hello World!"
+ }
+
 #[post("/upload", format = "multipart/form-data", data = "<form>")]
 pub async fn upload_file(form: Form<Upload<'_>>) -> Result<Json<responses::SuccessResponse<responses::EmptyTradKeys>>, responses::Error> {
     let option_path = Some(form.file.path()).unwrap();

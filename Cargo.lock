@@ -200,6 +200,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a26ae43d7bcc3b814de94796a5e736d4029efb0ee900c12e2d54c993ad1a1e07"
 
 [[package]]
+name = "empty_array_keys"
+version = "0.1.0"
+dependencies = [
+ "rocket",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "encoding_rs"
 version = "0.8.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -242,15 +251,6 @@ dependencies = [
  "toml",
  "uncased",
  "version_check",
-]
-
-[[package]]
-name = "firstrustbackend"
-version = "0.1.0"
-dependencies = [
- "rocket",
- "serde",
- "serde_json",
 ]
 
 [[package]]
