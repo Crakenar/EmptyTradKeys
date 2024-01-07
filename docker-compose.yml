@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  api:
+    build: ./src
+    volumes:
+      - type: bind
+        source: ./src
+        target: /code
+    environment:
+      ROCKET_ADDRESS: 0.0.0.0
+    ports:
+      - 8000:8000

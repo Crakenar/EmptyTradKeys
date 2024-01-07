@@ -1,0 +1,183 @@
+[
+  
+  {
+    "_id": "65949578c73d5974958e1af5",
+    "index": 0,
+    "guid": "da67533b-ab23-4a54-9ed2-9339e46c6908",
+    "isActive": true,
+    "balance": "$3,309.95",
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "eyeColor": "",
+    "name": null,
+    "gender": "female",
+    "company": "TROLLERY",
+    "email": "merleestrada@trollery.com",
+    "phone": "+1 (822) 444-3121",
+    "address": "558 Schermerhorn Street, Gila, Marshall Islands, 6915",
+    "about": "Adipisicing eiusmod ea in Lorem consectetur qui sunt nulla. Sunt ut pariatur aliquip ut. Veniam voluptate sit et incididunt cupidatat. Sunt esse esse aliqua id voluptate. Enim aliquip commodo aliquip occaecat aliquip dolor exercitation dolor ea est. Ea sint amet exercitation irure amet incididunt anim minim reprehenderit Lorem labore qui aliqua voluptate. Labore magna labore enim adipisicing magna adipisicing.\r\n",
+    "registered": "2017-05-11T09:22:44 -02:00",
+    "latitude": -79.186786,
+    "longitude": -157.208379,
+    "tags": [
+      "esse",
+      "aute",
+      "ut",
+      "irure",
+      "quis",
+      "minim",
+      "adipisicing"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mollie Carroll"
+      },
+      {
+        "id": 1,
+        "name": "Chase George"
+      },
+      {
+        "id": 2,
+        "name": "Whitehead Richardson"
+      }
+    ],
+    "greeting": "Hello, Merle Estrada! You have 1 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "65949578a1a8e3ffef646524",
+    "index": 1,
+    "guid": "e5e4d156-cfb5-40e1-ad76-c1d3aa95cf40",
+    "isActive": true,
+    "balance": "$2,271.10",
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "eyeColor": "blue",
+    "name": "Louisa Burris",
+    "gender": "female",
+    "company": "KATAKANA",
+    "email": "louisaburris@katakana.com",
+    "phone": "+1 (874) 582-2621",
+    "address": "521 Beadel Street, Wright, Pennsylvania, 336",
+    "about": "Eiusmod minim ad cupidatat pariatur. Aliquip tempor irure sit excepteur dolor. Proident magna magna dolore aliqua anim aliquip duis est.\r\n",
+    "registered": "2018-08-11T04:03:13 -02:00",
+    "latitude": 64.195343,
+    "longitude": -143.566474,
+    "tags": [
+      "tempor",
+      "ad",
+      "sint",
+      "proident",
+      "quis",
+      "proident",
+      "dolor"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Haley Soto"
+      },
+      {
+        "id": 1,
+        "name": "Isabella Webster"
+      },
+      {
+        "id": 2,
+        "name": "Francine Weber"
+      }
+    ],
+    "greeting": "Hello, Louisa Burris! You have 3 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "659495780d5ea00f00d8a1f8",
+    "index": 2,
+    "guid": "e48cfd06-b390-4373-9649-afe83752a213",
+    "isActive": false,
+    "balance": "$1,386.59",
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "eyeColor": "brown",
+    "name": "Lela Walters",
+    "gender": "female",
+    "company": "ZAGGLE",
+    "email": "lelawalters@zaggle.com",
+    "phone": "+1 (841) 459-3501",
+    "address": "551 Carroll Street, Skyland, Illinois, 1441",
+    "about": "Qui consequat reprehenderit reprehenderit elit. Cupidatat occaecat fugiat fugiat nisi ut do deserunt pariatur mollit. Ullamco tempor ad et voluptate magna amet pariatur dolore amet qui aute. Quis proident cupidatat labore aliqua voluptate nulla consectetur incididunt nostrud nostrud. Irure ullamco exercitation anim minim proident excepteur labore id mollit ipsum reprehenderit dolore in quis.\r\n",
+    "registered": "2017-02-13T10:39:31 -01:00",
+    "latitude": 51.574552,
+    "longitude": -157.553966,
+    "tags": [
+      "officia",
+      "sit",
+      "deserunt",
+      "consequat",
+      "pariatur",
+      "aute",
+      "mollit"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Tania Mays"
+      },
+      {
+        "id": 1,
+        "name": "Franklin Dotson"
+      },
+      {
+        "id": 2,
+        "name": "Stacey Hale"
+      }
+    ],
+    "greeting": "Hello, Lela Walters! You have 8 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "659495788e709c60b3be625b",
+    "index": 3,
+    "guid": "f8c37636-10eb-4bab-808d-3094f7170b11",
+    "isActive": false,
+    "balance": "$3,438.87",
+    "picture": "http://placehold.it/32x32",
+    "age": 40,
+    "eyeColor": "brown",
+    "name": "Delgado Holt",
+    "gender": "male",
+    "company": "ASSISTIX",
+    "email": "delgadoholt@assistix.com",
+    "phone": "+1 (988) 419-2176",
+    "address": "463 Noel Avenue, Oberlin, Mississippi, 5847",
+    "about": "Qui elit laborum dolor enim do laboris reprehenderit. Sunt dolore amet culpa culpa occaecat consequat. Deserunt tempor excepteur officia incididunt irure commodo occaecat qui ad laborum aliqua. Veniam officia veniam dolor adipisicing. Tempor esse non laborum duis excepteur nostrud commodo non laboris sint.\r\n",
+    "registered": "2020-08-15T02:06:54 -02:00",
+    "latitude": -83.247524,
+    "longitude": 158.816571,
+    "tags": [
+      "elit",
+      "eu",
+      "culpa",
+      "est",
+      "tempor",
+      "nisi",
+      "in"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Darlene Pittman"
+      },
+      {
+        "id": 1,
+        "name": "Berry Crawford"
+      },
+      {
+        "id": 2,
+        "name": "Maryanne Woods"
+      }
+    ],
+    "greeting": "Hello, Delgado Holt! You have 10 unread messages.",
+    "favoriteFruit": "strawberry"
+  }
+]
